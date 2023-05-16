@@ -1,0 +1,15 @@
+{
+    "name": "hexlet/code",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Anastasia Smolyakova",
+            "email": "smolyakova_av@mail.ru"
+        }
+    ],
+    "require": {}
+}
