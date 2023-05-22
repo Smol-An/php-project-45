@@ -3,7 +3,8 @@
     "bin": [
         "bin/brain-games",
         "bin/brain-even",
-        "bin/brain-calc"
+        "bin/brain-calc",
+        "bin/brain-gcd"
     ],
     "autoload": {
         "psr-4": {
@@ -12,7 +13,8 @@
     "files": [
             "src/Cli.php",
             "src/Even.php",
-            "src/Calc.php"
+            "src/Calc.php",
+            "src/Gcd.php"
     ]
     },
     "authors": [
