@@ -14,21 +14,21 @@ function brainGcd()
 
     function getGcd($x, $y)
     {
-      $denominatorsX = [];
-      for ($i = 1; $i <= $x; $i++) {
-        if ($x % $i === 0) {
-          $denominatorsX[] = $i;
+        $denominatorsX = [];
+        for ($i = 1; $i <= $x; $i++) {
+            if ($x % $i === 0) {
+                $denominatorsX[] = $i;
+            }
         }
-      }
-      $denominatorsY = [];
-      for ($j = 1; $j <= $y; $j++) {
-        if ($y % $j === 0) {
-          $denominatorsY[] = $j;
+        $denominatorsY = [];
+        for ($j = 1; $j <= $y; $j++) {
+            if ($y % $j === 0) {
+                $denominatorsY[] = $j;
+            }
         }
-      }
-      $commonDenominators = array_intersect($denominatorsX, $denominatorsY);
-      $gcd = max($commonDenominators);
-      return $gcd;
+        $commonDenominators = array_intersect($denominatorsX, $denominatorsY);
+        $gcd = max($commonDenominators);
+        return $gcd;
     }
 
     for ($i = 1; $i <= 3; $i++) {
@@ -46,4 +46,3 @@ function brainGcd()
     }
     line("Congratulations, %s!", $name);
 }
-
