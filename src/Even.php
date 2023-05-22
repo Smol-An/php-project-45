@@ -12,11 +12,11 @@ function brainEven()
     line("Hello, %s!", $name);
     line('Answer "yes" if the number is even, otherwise answer "no".');
 
-    for ($i =1; $i <= 3; $i++) {
-    $randomNumber = rand(1, 100);
-    $correctAnswer = $randomNumber % 2 === 0 ? 'yes' : 'no';
-    line("Question: %s", $randomNumber);
-    $answer = prompt('Your answer');
+    for ($i = 1; $i <= 3; $i++) {
+        $randomNumber = rand(1, 100);
+        $correctAnswer = $randomNumber % 2 === 0 ? 'yes' : 'no';
+        line("Question: %s", $randomNumber);
+        $answer = prompt('Your answer');
         if ($answer === $correctAnswer) {
             line('Correct!');
         } else {
@@ -28,4 +28,3 @@ function brainEven()
 }
 
 brainEven();
-
