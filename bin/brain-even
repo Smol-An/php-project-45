@@ -11,3 +11,5 @@ if (file_exists($autoloadPath1)) {
 }
 
 use BrainGames\Even;
+
+Even\brainEven();

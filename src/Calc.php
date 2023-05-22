@@ -39,5 +39,3 @@ function brainCalc()
     }
     line("Congratulations, %s!", $name);
 }
-
-brainCalc();

@@ -26,5 +26,3 @@ function brainEven()
     }
     line("Congratulations, %s!", $name);
 }
-
-brainEven();
