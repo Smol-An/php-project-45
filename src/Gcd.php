@@ -10,7 +10,7 @@ function brainGcd()
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name', false, '? ');
     line("Hello, %s!", $name);
-    line('Answer "yes" if the number is even, otherwise answer "no".');
+    line('Find the greatest common divisor of given numbers.');
 
     function getGcd($x, $y)
     {
