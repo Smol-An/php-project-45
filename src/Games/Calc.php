@@ -4,7 +4,7 @@ namespace BrainGames\Calc;
 
 use function BrainGames\Engine\play;
 
-function calculate(int $x, $sign, int $y)
+function calculate(int $x, mixed $sign, int $y)
 {
     switch ($sign) {
         case '+':
