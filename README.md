@@ -5,7 +5,11 @@
 
 ### About the project
 ```
-Brain Games is a set of five console games based on popular mobile brain training apps. Each game asks questions that need to be answered correctly. After three correct answers, the game is considered to be completed. Wrong answers end the game and offer to play it again. 
+Brain Games is a set of five console games based on popular mobile brain training apps.
+Each game asks questions that need to be answered correctly.
+After three correct answers, the game is considered to be completed.
+Wrong answers end the game and offer to play it again.
+
 Games:
 * Brain-even: definition of an even number.
 * Brain-calc: arithmetic expressions to be evaluated.
