@@ -4,7 +4,6 @@ namespace BrainGames\Games\Progression;
 
 use function BrainGames\Engine\play;
 
-
 function getRandomRow(): array
 {
     $randomLength = rand(6, 10);
@@ -16,7 +15,6 @@ function getRandomRow(): array
     }
     return $randomRow;
 }
-
 
 function getRandomMissedRow(array $arr, int $x): array
 {
@@ -30,7 +28,6 @@ function getRandomMissedRow(array $arr, int $x): array
     }
     return $randomMissedRow;
 }
-
 
 function brainProgression()
 {

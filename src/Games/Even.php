@@ -4,12 +4,10 @@ namespace BrainGames\Games\Even;
 
 use function BrainGames\Engine\play;
 
-
 function isEven(int $x): bool
 {
     return $x % 2 === 0;
 }
-
 
 function brainEven()
 {

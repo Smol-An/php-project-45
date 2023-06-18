@@ -4,7 +4,6 @@ namespace BrainGames\Games\Gcd;
 
 use function BrainGames\Engine\play;
 
-
 function getGcd(int $x, int $y): int
 {
     $denominatorsX = [];
@@ -25,7 +24,6 @@ function getGcd(int $x, int $y): int
     $gcd = max($commonDenominators);
     return $gcd;
 }
-
 
 function brainGcd()
 {

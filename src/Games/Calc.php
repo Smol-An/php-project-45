@@ -4,7 +4,6 @@ namespace BrainGames\Games\Calc;
 
 use function BrainGames\Engine\play;
 
-
 function calculate(int $x, mixed $sign, int $y): int
 {
     switch ($sign) {
@@ -18,7 +17,6 @@ function calculate(int $x, mixed $sign, int $y): int
             return null;
     }
 }
-
 
 function brainCalc()
 {

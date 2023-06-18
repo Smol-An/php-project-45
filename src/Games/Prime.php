@@ -4,7 +4,6 @@ namespace BrainGames\Games\Prime;
 
 use function BrainGames\Engine\play;
 
-
 function isPrime(int $x): bool
 {
     $denominatorsX = [];
@@ -17,7 +16,6 @@ function isPrime(int $x): bool
     $denominatorsPrime = [1, $x];
     return $denominatorsX === $denominatorsPrime;
 }
-
 
 function brainPrime()
 {
