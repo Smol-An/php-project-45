@@ -1,32 +1,33 @@
 <?php
 
-namespace BrainGames\Prime;
+namespace BrainGames\Games\Prime;
 
 use function BrainGames\Engine\play;
 
-function isPrime(int $x)
+
+function isPrime(int $x): bool
 {
     $denominatorsX = [];
-    for ($i = 1; $i <= $x; $i++) {
+    for ($i = 1; $i <= $x; $i += 1) {
         if ($x % $i === 0) {
             $denominatorsX[] = $i;
         }
     }
+
     $denominatorsPrime = [1, $x];
-    return $denominatorsX === $denominatorsPrime ? 'yes' : 'no';
+    return $denominatorsX === $denominatorsPrime;
 }
+
 
 function brainPrime()
 {
     $gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-    $question1 = rand(1, 100);
-    $question2 = rand(1, 100);
-    $question3 = rand(1, 100);
+    $data = function () {
+        $question = rand(1, 100);
+        $correctAnswer = isPrime($question) ? 'yes' : 'no';
+        return [$question, $correctAnswer];
+    };
 
-    $correctAnswer1 = isPrime($question1);
-    $correctAnswer2 = isPrime($question2);
-    $correctAnswer3 = isPrime($question3);
-
-    play($gameRules, $question1, $question2, $question3, $correctAnswer1, $correctAnswer2, $correctAnswer3);
+    play($gameRules, $data);
 }
