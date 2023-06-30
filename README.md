@@ -20,13 +20,13 @@ Games:
 
 ### Requirements
 
-* PHP 8.1
-* composer 2.5.5
+* PHP >= 8.1
+* composer >= 2.5.5
 
 ### Setup
 
 ```
-$ git clone git@github.com:Smol-An/php-project-45.git
+$ git clone https://github.com/Smol-An/php-project-45.git
 $ cd php-project-45
 $ make install
 ```
