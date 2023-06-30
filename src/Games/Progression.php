@@ -4,6 +4,8 @@ namespace BrainGames\Games\Progression;
 
 use function BrainGames\Engine\play;
 
+use const BrainGames\Engine\ROUNDS;
+
 function getRandomRow(): array
 {
     $randomLength = rand(6, 10);
@@ -33,13 +35,14 @@ function brainProgression()
 {
     $gameRules = 'What number is missing in the progression?';
 
-    $data = function () {
+    $data = [];
+    for ($i = 0; $i < ROUNDS; $i += 1) {
         $randomRow = getRandomRow();
         $randomMissedNumber = rand(0, count($randomRow) - 1);
         $randomMissedRow = getRandomMissedRow($randomRow, $randomMissedNumber);
         $question = implode(" ", $randomMissedRow);
         $correctAnswer = $randomRow[$randomMissedNumber];
-        return [$question, $correctAnswer];
+        $data[] = [$question, $correctAnswer];
     };
 
     play($gameRules, $data);

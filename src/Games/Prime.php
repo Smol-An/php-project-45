@@ -4,27 +4,32 @@ namespace BrainGames\Games\Prime;
 
 use function BrainGames\Engine\play;
 
+use const BrainGames\Engine\ROUNDS;
+
 function isPrime(int $x): bool
 {
-    $denominatorsX = [];
-    for ($i = 1; $i <= $x; $i += 1) {
+    if ($x === 1) {
+        return false;
+    }
+
+    for ($i = 2; $i < $x; $i += 1) {
         if ($x % $i === 0) {
-            $denominatorsX[] = $i;
+            return false;
         }
     }
 
-    $denominatorsPrime = [1, $x];
-    return $denominatorsX === $denominatorsPrime;
+    return true;
 }
 
 function brainPrime()
 {
     $gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-    $data = function () {
+    $data = [];
+    for ($i = 0; $i < ROUNDS; $i += 1) {
         $question = rand(1, 100);
         $correctAnswer = isPrime($question) ? 'yes' : 'no';
-        return [$question, $correctAnswer];
+        $data[] = [$question, $correctAnswer];
     };
 
     play($gameRules, $data);
