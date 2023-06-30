@@ -11,11 +11,14 @@ function getGcd(int $x, int $y): int
     $max = max($x, $y);
     $min = min($x, $y);
 
-    for ($i = $min; $i >= 1; $i -= 1) {
+    $gcd = 1;
+    for ($i = $min; $i > 1; $i -= 1) {
         if ($max % $i === 0 && $min % $i === 0) {
-            return $i;
+            $gcd = $i;
+            return $gcd;
         }
     }
+    return $gcd;
 }
 
 function brainGcd()
