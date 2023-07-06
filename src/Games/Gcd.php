@@ -11,14 +11,13 @@ function getGcd(int $x, int $y): int
     $max = max($x, $y);
     $min = min($x, $y);
 
-    $gcd = 1;
     for ($i = $min; $i > 1; $i -= 1) {
         if ($max % $i === 0 && $min % $i === 0) {
-            $gcd = $i;
-            return $gcd;
+            return $i;
         }
     }
-    return $gcd;
+
+    return 1;
 }
 
 function brainGcd()
@@ -29,7 +28,7 @@ function brainGcd()
     for ($i = 0; $i < ROUNDS; $i += 1) {
         $randomNumber1 = rand(1, 100);
         $randomNumber2 = rand(1, 100);
-        $question = "{$randomNumber1} {$randomNumber2}";
+        $question = "$randomNumber1 $randomNumber2";
         $correctAnswer = getGcd($randomNumber1, $randomNumber2);
         $data[] = [$question, $correctAnswer];
     };

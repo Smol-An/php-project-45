@@ -11,24 +11,13 @@ function getRandomRow(): array
     $randomLength = rand(6, 10);
     $randomStep = rand(1, 3);
     $randomFirstNumber = rand(1, 20);
+    $randomLastNumber = $randomFirstNumber + $randomStep * ($randomLength - 1);
     $randomRow = [];
-    for ($i = $randomFirstNumber; $i < ($randomFirstNumber + $randomLength * $randomStep); $i += $randomStep) {
+    for ($i = $randomFirstNumber; $i <= $randomLastNumber; $i += $randomStep) {
         $randomRow[] = $i;
     }
-    return $randomRow;
-}
 
-function getRandomMissedRow(array $arr, int $x): array
-{
-    $randomMissedRow = [];
-    for ($i = 0; $i < count($arr); $i += 1) {
-        if ($i === $x) {
-              $randomMissedRow[] = '..';
-        } else {
-              $randomMissedRow[] = $arr[$i];
-        }
-    }
-    return $randomMissedRow;
+    return $randomRow;
 }
 
 function brainProgression()
@@ -39,9 +28,9 @@ function brainProgression()
     for ($i = 0; $i < ROUNDS; $i += 1) {
         $randomRow = getRandomRow();
         $randomMissedNumber = rand(0, count($randomRow) - 1);
-        $randomMissedRow = getRandomMissedRow($randomRow, $randomMissedNumber);
-        $question = implode(" ", $randomMissedRow);
         $correctAnswer = $randomRow[$randomMissedNumber];
+        $randomRow[$randomMissedNumber] = '..';
+        $question = implode(" ", $randomRow);
         $data[] = [$question, $correctAnswer];
     };
 

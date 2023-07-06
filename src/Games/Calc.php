@@ -6,7 +6,7 @@ use function BrainGames\Engine\play;
 
 use const BrainGames\Engine\ROUNDS;
 
-function calculate(int $x, mixed $sign, int $y): int
+function calculate(int $x, string $sign, int $y): int
 {
     switch ($sign) {
         case '+':
@@ -16,7 +16,7 @@ function calculate(int $x, mixed $sign, int $y): int
         case '*':
             return $x * $y;
         default:
-            return null;
+            throw new Exception('unknown operator');
     }
 }
 
@@ -30,7 +30,7 @@ function brainCalc()
         $randomNumber2 = rand(1, 25);
         $mathSigns = ['+', '-', '*'];
         $randomSign = $mathSigns[array_rand($mathSigns)];
-        $question = "{$randomNumber1} {$randomSign} {$randomNumber2}";
+        $question = "$randomNumber1 $randomSign $randomNumber2";
         $correctAnswer = calculate($randomNumber1, $randomSign, $randomNumber2);
         $data[] = [$question, $correctAnswer];
     };
