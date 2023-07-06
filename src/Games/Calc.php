@@ -16,7 +16,7 @@ function calculate(int $x, string $sign, int $y): int
         case '*':
             return $x * $y;
         default:
-            throw new Error(`Unknown operator: '$sign'`);
+            throw new \Exception("Unknown operator: $sign");
     }
 }
 
