@@ -20,7 +20,7 @@ function calculate(int $x, string $sign, int $y): int
     }
 }
 
-function brainCalc()
+function brainCalc(): void
 {
     $gameRules = 'What is the result of the expression?';
 

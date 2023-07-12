@@ -20,7 +20,7 @@ function getGcd(int $x, int $y): int
     return 1;
 }
 
-function brainGcd()
+function brainGcd(): void
 {
     $gameRules = 'Find the greatest common divisor of given numbers.';
 

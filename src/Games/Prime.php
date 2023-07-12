@@ -21,7 +21,7 @@ function isPrime(int $x): bool
     return true;
 }
 
-function brainPrime()
+function brainPrime(): void
 {
     $gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
