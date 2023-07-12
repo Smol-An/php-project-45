@@ -21,7 +21,8 @@ Games:
 ### Requirements
 
 * PHP >= 8.1
-* composer >= 2.5.5
+* Composer >= 2.5.5
+* GNU Make >= 4.3
 
 ### Setup
 
